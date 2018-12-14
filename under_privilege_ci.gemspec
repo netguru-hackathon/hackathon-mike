@@ -9,4 +9,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.authors = ["Team Mike"]
   s.executables << 'under_privilege_ci'
+  s.add_development_dependency('brakeman')
+  s.add_development_dependency('bundler-audit')
 end
