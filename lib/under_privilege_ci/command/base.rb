@@ -4,21 +4,12 @@ require 'open3'
 module UnderPrivilegeCI
   module Command
     class Base
+      attr_reader :stdout, :stderr, :exit_code
+
       def initialize(command, args = '')
         @command = command
         @args = args
-      end
-
-      def exit_code
-        call[2].to_i
-      end
-
-      def stdout
-        call[0]
-      end
-
-      def stderr
-        call[1]
+        call
       end
 
       private
@@ -26,7 +17,7 @@ module UnderPrivilegeCI
       attr_reader :command, :args
 
       def call
-        @call ||= Open3.capture3("#{command} #{args}")
+        @stdout, @stderr, @exit_code = Open3.capture3("#{command} #{args}")
       end
     end
   end
