@@ -7,4 +7,5 @@ Gem::Specification.new do |s|
     "lib/under_privilege_ci.rb"
   ]
   s.require_paths = ["lib"]
+  s.authors = ["Team Mike"]
 end
