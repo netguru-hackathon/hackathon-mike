@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+
+UnderPrivilegeCI::Base.new.call
