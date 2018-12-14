@@ -11,4 +11,5 @@ Gem::Specification.new do |s|
   s.executables << 'under_privilege_ci'
   s.add_development_dependency('brakeman')
   s.add_development_dependency('bundler-audit')
+  s.add_development_dependency('rspec')
 end
